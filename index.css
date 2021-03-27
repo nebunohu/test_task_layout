@@ -14,6 +14,9 @@ html {
     background-color: #E5E5E5;
     height: 100%;
 }
+body {
+    height: 100%;
+}
 
 main {
     display: flex;
@@ -173,7 +176,7 @@ header {
 .search-result__container {
     display: flex;
     flex-flow: row nowrap;
-    margin: 39px 0 0 0;
+    padding: 37px 0 0 0;
 }
 
 .categoriesHeader {
@@ -185,7 +188,7 @@ header {
     color: #000000;
 }
 
-.categoriesHeader ~ div > ul {
+.categories-list {
     display: flex;
     height: 255px;
     flex-flow: column nowrap;
@@ -193,7 +196,7 @@ header {
     margin: 13px 0 0 0;
 }
 
-.categoriesHeader ~ div > ul > li {
+.categories-list-item {
     list-style-type: none;
     font-family: Arial;
     font-size: 14px;
@@ -203,20 +206,175 @@ header {
     color: #5375B7;
 }
 
+.cost {
+    margin: 51px 0 0 0;
+}
+
+.cost-header {
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    /* identical to box height */
+
+
+    color: #000000;
+
+}
+
+.set-cost {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 15px 0 0 0;
+
+}
+
+.cost-text {
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+    opacity: 0.5;
+}
+
+.cost-value {
+    width: 110px;
+    height: 40px;
+
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.slider {
+    position: relative;
+    margin: 19px 0 0 0;
+}
+
+.slider-line {
+    width: 290px;
+    height: 4px;
+
+    background: #000000;
+    border-radius: 30px;
+}
+
+.slider-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 14px;
+    top: -5px;
+
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.brands {
+    margin: 32px 0 0 0;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.brands-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brands-header {
+    font-weight: bold;
+    line-height: 19px; 
+}
+
+.brands-clear {
+    font-family: Arial;
+    font-size: 10px;
+    line-height: 11px;
+    text-align: right;
+    text-decoration-line: underline;
+
+    /* Gray 1 */
+
+    color: #333333;
+
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.brands-list {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 13px 0 0 0;
+}
+
+.brands-checkbox__label {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+.brands-list-item {
+    list-style-type: none;
+    margin: 0 0 15px 0;
+}
+
+.brands-checkbox {
+    width: 15px;
+    height: 15px;
+    margin: 0 10px 0 0;
+
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.brands-count {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
 .left {
     width: 296px;
-    margin: 0 37px 0 0;
+    margin: 2px 37px 0 0;
+}
+
+.right {
+    width: 868px;
 }
 
 .sort {
     margin: 0 0 20px 0;
 }
 
-.sort div {
+
+.sort-top {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-.sort > div:last-child {
+
+.sort-bot {
+    display: flex;
+    flex-flow: row nowrap;
     margin: 20px 0 0 0;
 }
 
@@ -227,16 +385,111 @@ header {
     font-size: 14px;
     line-height: 19px;
     /* identical to box height */
+    color: #000000;
+}
 
+.sort__text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.type {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #5375B7;
+    margin: 0 0 0 11px;
+}
+
+.selected-type {
+    position: relative;
+    margin: 0 0 0 8px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #000000;
+}
+.selected-type::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 1px;
+    background-color:  #F1BD45;
+}
+
+.search-result-settings {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 163px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
 
     color: #000000;
 }
 
+.search-result-settings-text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+
+.search-result-count {
+    position: absolute;
+    top: -7px;
+    right: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    height: 33.33px;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.number {
+    margin-left: 9px;
+}
+
+.arrow {
+    margin: 0 8px 4px 0;
+    height: 7px;
+    width: 7px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    transform: rotate(45deg);
+}
+
 .search-result__filter {
+    display: flex;
+    justify-content: center;
     width: 100px;
     height: 30px;  
     margin: 0 10px 0 0;
-    padding: auto 0;
     background: #FFF3D8;
     border-radius: 3px;
     font-family: Roboto;
@@ -244,11 +497,14 @@ header {
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    text-align: center;
 
     color: #000000;
 
     border-radius: 3px;
+}
+
+.search-result__filter span {
+    margin: auto auto;
 }
 
 /*-Card--------------*/
@@ -294,6 +550,19 @@ header {
     color: #000000;
 }
 
+.products_oldPrice {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+
+    text-decoration-line: line-through;
+
+    color: #A9A9A9;
+}
+
 .products__button {
     display: flex;
     justify-content: flex-start;
@@ -315,5 +584,10 @@ header {
     /* identical to box height, or 114% */
 
     color: #000000;
+    cursor: pointer;
+}
+
+.products__button:hover {
+    background: #e7c065;
 }
 /*-------------------*/

@@ -41,60 +41,87 @@
                 <div class="left">
                     <div class="categoriesHeader">Все категории</div>
                     <div>
-                        <ul>
-                            <li>Категория в которой нашли что-то <span>(ххх)</span></li>
-                            <li>Категория в которой нашли что-то <span>(ххх)</span></li>
-                            <li>Категория в которой нашли что-то <span>(ххх)</span></li>
-                            <li>Категория в которой нашли что-то <span>(ххх)</span></li>
-                            <li>Категория в которой нашли что-то <span>(ххх)</span></li>
-                            <li>Категория в которой нашли что-то <span>(ххх)</span></li>
-                            <li>Категория в которой нашли что-то <span>(ххх)</span></li>
-                            <li>Категория в которой нашли что-то <span>(ххх)</span></li>
-                            <li>Ещё 10 категорий...</span></li>
+                        <ul class="categories-list">
+                            <li class="categories-list-item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                            <li class="categories-list-item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                            <li class="categories-list-item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                            <li class="categories-list-item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                            <li class="categories-list-item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                            <li class="categories-list-item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                            <li class="categories-list-item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                            <li class="categories-list-item">Категория в которой нашли что-то <span>(ххх)</span></li>
+                            <li class="categories-list-item">Ещё 10 категорий...</span></li>
                         </ul>
                     </div>
                     <div class="cost">
-                        <div class="set-cost">
+                        <div class="cost-wrapper">
                             <div class="cost-header">Цена, валюта</div>
-                            <div class="cost-text">от</div>
-                            <input class="cost-value" type="text">
-                            <div class="cost-text">до</div>
-                            <input class="cost-value" type="text">
+                            <div class="set-cost">
+                                <div class="cost-text">от</div>
+                                <input class="cost-value" type="text">
+                                <div class="cost-text">до</div>
+                                <input class="cost-value" type="text">
+                                <div class="cost-text">Р</div>
+                            </div>
+                            
                         </div>
-                        <div class="slider"></div>
+                        <div class="slider">
+                        <div class="slider-line">
+                            <div class="slider-dot"></div>
+
+                        </div>
+                        </div>
                     </div>
                     <div class="brands">
-                        <div>Бренды</div>
-                        <input class="brand-checkbox" type="checkbox">
-                        <label></label>
-                        <input class="brand-checkbox" type="checkbox">
-                        <label></label>
-                        <input class="brand-checkbox" type="checkbox">
-                        <label></label>
+                        <div class="brands-top">
+                            <div class="brands-header">Бренды</div>
+                            <div class="brands-clear">Очистить</div>
+                        </div>
+                        <ul class="brands-list">
+                            <li class="brands-list-item">
+                                <label class="brands-checkbox__label" for="checkbox1">
+                                    <input class="brands-checkbox" type="checkbox" id="checkbox1" name="checkbox1">
+                                    Бренд <span class="brands-count">(xxx)</span>
+                                </label>
+                            </li>
+                            <li class="brands-list-item">
+                                <label class="brands-checkbox__label" for="checkbox1">
+                                    <input class="brands-checkbox" type="checkbox" id="checkbox1" name="checkbox1">
+                                    Бренд <span class="brands-count">(x)</span>
+                                </label>
+                            </li>
+                            <li class="brands-list-item">
+                                <label class="brands-checkbox__label" for="checkbox1">
+                                    <input class="brands-checkbox" type="checkbox" id="checkbox1" name="checkbox1">
+                                    Бренд <span class="brands-count">(x xxx)</span>
+                                </label>
+                            </li>
+                            
+                        </ul>
                     </div>
                 </div>
                 <div class="right">
                     <div class="sort">
-                        <div>
+                        <div class="sort-top">
                             <div class="sort__types">
-                                <span>Сортировать по:</span>
-                                <span>популярности</span>
-                                <span>сначала дешевые</span>
-                                <span>сначала дорогие</span>
+                                <span class="sort__text">Сортировать по:</span>
+                                <span class="selected-type">популярности</span>
+                                <span class="type">сначала дешевые</span>
+                                <span class="type">сначала дорогие</span>
                             </div>
-                            <div>
-                                показывать по
-                                <div>
-                                    24
-                                    <div></div>
+                            <div class="search-result-settings">
+                                <div class="search-result-settings-text">показывать по</div>
+                                <div class="search-result-count">
+                                    <div class="number">24</div>
+                                    <div class="arrow"></div>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="search-result__filter">Уточнение</div>
-                            <div class="search-result__filter">Уточнение</div>
-                            <div class="search-result__filter">Уточнение</div>
-                            <div class="search-result__filter">Уточнение</div>
+                        <div class="sort-bot">
+                            <div class="search-result__filter"><span>Уточнение</span></div>
+                            <div class="search-result__filter"><span>Уточнение</span></div>
+                            <div class="search-result__filter"><span>Уточнение</span></div>
+                            <div class="search-result__filter"><span>Уточнение</span></div>
                         </div>
                         
                     </div>
